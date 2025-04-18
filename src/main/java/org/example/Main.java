@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.Exception.InvalidDataInputException;
+import org.example.controller.UserRegister;
 import org.example.infrastructure.ColorDemo;
 
 import java.util.Scanner;
@@ -9,6 +10,8 @@ import static org.example.infrastructure.ColorDemo.RESET;
 import static org.example.infrastructure.ColorDemo.YELLOW;
 
 public class Main {
+    private static final UserRegister userRegister = new UserRegister();
+
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -22,7 +25,7 @@ public class Main {
 
         switch (choose) {
             case 1:
-                // register user
+                userRegister.userRegister();
                 break;
             case 2:
                 // sign in
